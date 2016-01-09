@@ -5,11 +5,12 @@ from django.db import models
 # Create your models here.
 
 class Suppliers(models.Model):
-    username = models.CharField(max_length=30)
+    brand_name = models.CharField(max_length=30)
+    email = models.EmailFeld() 
     price = models.IntegerField()
     description = models.TextField(max_length=400)
     date = models.DateTimeField()
-    image_item = models.ImageField()
+    image = models.ImageField()
     logo = models.ImageField()
 
     class Meta:
