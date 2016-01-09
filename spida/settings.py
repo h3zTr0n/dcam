@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'spida.apps.display',
-    'authtools,
+    'authtools',
 ]
 
 MIDDLEWARE_CLASSES = [
