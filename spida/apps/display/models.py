@@ -6,16 +6,16 @@ from django.db import models
 
 class Suppliers(models.Model):
     username = models.CharField(max_length=30)
-    price = models.LargeInterField()
+    price = models.IntegerField()
     description = models.TextField(max_length=400)
     date = models.DateTimeField()
-    image_item = models.ImageField(upload="")
-    logo = models.ImageField(upload="")
+    image_item = models.ImageField()
+    logo = models.ImageField()
 
     class Meta:
-        abstruct = True
+        abstract = True
 
-@python_2_unicode_compatible
+# @python_2_unicode_compatible
 class Supplier(Suppliers):
 
     def __unicode__(self):
