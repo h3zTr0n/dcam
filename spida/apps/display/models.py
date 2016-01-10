@@ -2,11 +2,11 @@ from __future__ import unicode_literals
 from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 
-# Create your models here.
+# Model for the supplier
 
-class Suppliers(models.Model):
+class Supplier(models.Model):
     brand_name = models.CharField(max_length=30)
-    email = models.EmailFeld() 
+    email = models.EmailField() 
     price = models.IntegerField()
     description = models.TextField(max_length=400)
     date = models.DateTimeField()
@@ -14,10 +14,10 @@ class Suppliers(models.Model):
     logo = models.ImageField()
 
     class Meta:
-        abstract = True
+        abstract = False
 
 # @python_2_unicode_compatible
-class Supplier(Suppliers):
+class Supp(Supplier):
 
     def __unicode__(self):
-        return "{}'s' profile". format(self.username)
+        return "{}'s' profile". format(self.brand_name)
