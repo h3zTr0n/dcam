@@ -4,4 +4,6 @@
 *.py\~
 *.html~
 *.gitignore~
-  
+*.jpg
+*.png
+*.jpeg  
