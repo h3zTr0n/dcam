@@ -14,9 +14,11 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
+form spida.apps.display import urls
 from django.contrib import admin
 
 urlpatterns = [
+	urls(r'^', include(urls), name="home"),
     url(r'^admin/', admin.site.urls),
 ]
