@@ -1,0 +1,27 @@
+{% extends "_layout/base.html" %}
+<html>
+<head>
+	<title>{% block title %}  {% endbock title %}</title>
+		   {% block css %}<a href="{}" type="text/stylesheet"></a>{% endblock css %}
+		   {% block js %}<a href="{}" type="javascript"></a>{% endblock js %}	
+	</head>
+	<body>
+	{% block heading %}
+		Home page: 
+	 {% endblock heading %}
+	 
+	{% block content %} 
+		{{ for item in model_data }}
+			<div id="container"> 
+				<ul> {{ item.logo }}</ul>
+				<ul> {{ item.brand_name }}</ul>
+			</div>
+		{{ endfor }}
+	{% endblock content %}
+	
+	{% block footer %} 
+	
+	{% endblock footer %}
+ 	</body>
+
+</html>
