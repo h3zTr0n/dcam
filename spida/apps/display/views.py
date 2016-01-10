@@ -4,7 +4,7 @@ from django.views.generic import DetailView
 
 # display image data on home page
 class HomeDisplayView(DetailView):
-	template_name = "display/index.html"
+	template_name = "display/home.html"
 	model_data = Suppliers.objects.get()
 	def __init__(self, kwargs):
 		super(HomeDisplayView, self).__init__(kwargs):
