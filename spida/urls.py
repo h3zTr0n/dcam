@@ -18,6 +18,6 @@ from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
-	url(r'^', "spida.apps.display.urls", name="home"),
+	url(r'^', "spida.apps.display.views.HomeDisplayView", name="home"),
     url(r'^admin/', admin.site.urls),
 ]
