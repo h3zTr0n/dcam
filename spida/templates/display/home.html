@@ -3,25 +3,27 @@
 <head>
 	<title>{% block title %}  {% endblock %}</title>
 		   {% block css %}<a href="{}" type="text/stylesheet"></a>{% endblock %}
-		   {% block js %}<a href="{}" type="javascript"></a>{% endblock %}	
+		   {% block js %}<a href="{}" type="javascript"></a>{% endblock %}
 	</head>
 	<body>
 	{% block heading %}
-		<h1>Home page:</h1> 
+	{% load staticfiles %}
+		<h1>Display Home page:</h1>
 	 {% endblock heading %}
-	 
-	  {% block content %} 
-		 {% for item in model_data %}
+
+	  {% block content %}
+		 {% for item in items %}
 		 	<div class="container">
-		 		{{ item.logo }}
+			 <img src="{{ MEDIA_URL }}{{ item.image.url }}" width="150px" alt="{{ item.brand_name }}" class=img-responsive img-rounded/>
 		 		{{ item.brand_name }}
+				<br/>
 		 	</div>
 		 {% endfor %}
 	{% endblock content %}
-	
-	{% block footer %} 
-	
-	{% endblock footer %}  
+
+	{% block footer %}
+
+	{% endblock footer %}
  	</body>
 
 </html>

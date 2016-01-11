@@ -9,8 +9,8 @@ class Supplier(models.Model):
     email = models.EmailField()
     price = models.IntegerField()
     description = models.TextField(max_length=400)
-    date = models.DateTimeField()
-    image = models.ImageField(upload_to="uploads/")
+    date = models.DateTimeField(auto_now_add=True, auto_now=False)
+    image = models.ImageField(upload_to="uploads/%Y/%m/%d")
     logo = models.ImageField()
 
     class Meta:

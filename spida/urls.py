@@ -14,13 +14,16 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url 
+from django.conf.urls import url
 from django.conf.urls import include
 from django.contrib import admin
 from spida.apps.display import urls as display_urls
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-	url(r'^', include(display_urls), name="home"),
+	url(r'^home/', include(display_urls), name="home"),
 #	url(r'^/home/', "spida.apps.display.views.HomeDisplayView.as_view()", name="home"),
     url(r'^admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

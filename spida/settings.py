@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'spida.apps.display',
      'wagtail',
-    
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -123,3 +123,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+MEDIA_ROOT = (BASE_DIR)
+MEDIA_URL = '/uploads/'
