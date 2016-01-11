@@ -20,7 +20,7 @@ from django.contrib import admin
 from spida.apps.display import urls as display_urls
 
 urlpatterns = [
-	url(r'^display/', include(display_urls), name="home"),
+	url(r'^', include(display_urls), name="home"),
 #	url(r'^/home/', "spida.apps.display.views.HomeDisplayView.as_view()", name="home"),
     url(r'^admin/', admin.site.urls),
 ]

@@ -3,11 +3,7 @@ from .models import Supplier
 from django.views.generic import DetailView
  
 def HomeDisplayView(request):
-	template_name = "display/home.html"
-	model_data = Supplier.objects.all()[:2]
-	context = { "home": model_data }
-	# suppliers_title = "Welcome to {0}'s".format("ecom")
-	return render(template_name, context)
+	 return render(request, "display/home.html", {})
 	
 # display image data on home page
 #class HomeDisplayView(DetailView):

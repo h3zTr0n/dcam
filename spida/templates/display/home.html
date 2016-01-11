@@ -1,16 +1,16 @@
 {% extends "_layout/base.html" %}
 <html>
 <head>
-	<title>{% block title %}  {% endbock title %}</title>
-		   {% block css %}<a href="{}" type="text/stylesheet"></a>{% endblock css %}
-		   {% block js %}<a href="{}" type="javascript"></a>{% endblock js %}	
+	<title>{% block title %}  {% endblock %}</title>
+		   {% block css %}<a href="{}" type="text/stylesheet"></a>{% endblock %}
+		   {% block js %}<a href="{}" type="javascript"></a>{% endblock %}	
 	</head>
 	<body>
 	{% block heading %}
-		Home page: 
+		<h1>Home page:</h1> 
 	 {% endblock heading %}
 	 
-	{% block content %} 
+	  {% block content %} 
 		 {% for item in model_data %}
 		 	<div class="container">
 		 		{{ item.logo }}
@@ -21,7 +21,7 @@
 	
 	{% block footer %} 
 	
-	{% endblock footer %}
+	{% endblock footer %}  
  	</body>
 
 </html>
