@@ -1,6 +1,6 @@
-from django.shortcuts import url
-from .views import SupplierDisplayView as sdv
-
+from django.conf.urls import url
+from .views import HomeDisplayView as hdv
+ 
 urlpatterns = [
-    url(r'^', sdv.as_view(), name='home'),
+    url(r'^', hdv, name='home'),
 ]

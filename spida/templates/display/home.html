@@ -11,12 +11,12 @@
 	 {% endblock heading %}
 	 
 	{% block content %} 
-		{{ for item in model_data }}
-			<div id="container"> 
-				<ul> {{ item.logo }}</ul>
-				<ul> {{ item.brand_name }}</ul>
-			</div>
-		{{ endfor }}
+		 {% for item in model_data %}
+		 	<div class="container">
+		 		{{ item.logo }}
+		 		{{ item.brand_name }}
+		 	</div>
+		 {% endfor %}
 	{% endblock content %}
 	
 	{% block footer %} 
