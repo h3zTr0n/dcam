@@ -6,11 +6,11 @@ from django.db import models
 
 class Supplier(models.Model):
     brand_name = models.CharField(max_length=30)
-    email = models.EmailField() 
+    email = models.EmailField()
     price = models.IntegerField()
     description = models.TextField(max_length=400)
     date = models.DateTimeField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to="uploads/")
     logo = models.ImageField()
 
     class Meta:
