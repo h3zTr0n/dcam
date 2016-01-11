@@ -1,3 +1,5 @@
+# Author: Alison Mukoma
+
 """spida URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -21,9 +23,16 @@ from spida.apps.display import urls as display_urls
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+# Integrating wagtail content manager
+from wagtail.wagtailadmin import urls as wagtailadmin_urls
+from wagtail.wagtaildocs import urls as wagtaildocs_urls
+from wagtail.wagtailcore import urls as wagtail_urls
 
 urlpatterns = [
 	url(r'^home/', include(display_urls), name="home"),
 #	url(r'^/home/', "spida.apps.display.views.HomeDisplayView.as_view()", name="home"),
     url(r'^admin/', admin.site.urls),
+    url(r'^cms/', include(wagtailadmin_urls)),
+    url(r'^documents/', include(wagtaildocs_urls)),
+    url(r'^pages/', include(wagtail_urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
