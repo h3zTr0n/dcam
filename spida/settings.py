@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from django.core.urlresolvers import reverse_lazy
+import loggin.config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,6 +26,10 @@ SECRET_KEY = '33+97#3w3s%ib!bxc6r$ut^37c*+0xngp5ihc0e_w5j!w8*2ek'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# Django debug toolbar
+INSTALLED_APPS += (
+    'debug_toolbar.apps.DebugToolbarConfig',)
+
 
 ALLOWED_HOSTS = []
 
@@ -52,7 +58,10 @@ INSTALLED_APPS = [
     'compressor',
     'taggit',
     'spida.apps.display',
-
+    'authtools',
+    'crispy_forms',
+    'easy_thumbnails',
+    'accounts',
 
 ]
 
@@ -100,7 +109,7 @@ DATABASES = {
     }
 }
 
-
+CRISPY_TEMPLATE_PACK = "bootstrap3"
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
