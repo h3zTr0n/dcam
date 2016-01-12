@@ -14,18 +14,4 @@ class SupplierSignUpForm(forms.Form):
 	date = forms.DateTimeField()
 	image = forms.ImageField()
 	logo = forms.ImageField()
-
-	
-#class SupplierSignUpForm(authtoolsforms):
-#	def __init__(self, *args, **kwargs):
-#		super(SupplierSignUpForm, self).__init__(*args, **kwargs)
-#		self.helper = FormHelper()
-#		self.layout['email'].widget.input_type = "email"
-#		self.helpe.layout = Layout(
-#		Field("email", placeholder="Enter your email", autofocus=""),
-#		Field("brandname", placeholder="Enter your brand name"),
-#		# Field("image", placeholder="Enter your username"),
-#		# Field("password1", placeholder="Enter your password"),
-#		# Field("password2", placeholder="Re-enter your password"),
-#		Submit("Submit", "submit", css_class="btn-warning"),
-#		)
+ 
