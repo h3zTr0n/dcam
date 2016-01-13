@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+	{% load staticfiles %}
 	<title>{% block title %}  {% endblock title %}</title>
-		   {% block css %}<a href="{}" type="text/stylesheet"></a>{% endblock css %}
-		   {% block js %}<a href="{}" type="javascript"></a>{% endblock js %}	
+		   {% block css %}<link href="{% static 'bootstrap-3.3.1/css/boostrap.min.css' %}" rel="stylesheet">{% endblock css %}
+		   {% block js %}<link href="{% static 'bootstrap-3.3.1/js/botstrap.min.js'%}" rel="javascript">{% endblock js %}
 	</head>
 	<body>
 	{% block heading %}
-	
+
 	 {% endblock heading %}
-	 
-	{% block content %} 
-	
+
+	{% block content %}
+
 	{% endblock content %}
-	
-	{% block footer %} 
-	
+
+	{% block footer %}
+
 	{% endblock footer %}
  	</body>
 

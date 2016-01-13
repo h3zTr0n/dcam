@@ -1,0 +1,13 @@
+{% extends '_layout/base.html' %}
+
+{% block title %}Register | {{ block.super }}{% endbock title %}
+
+{% block headline %}<h1>Register for your Shopping Container</h1>{% endblock headline %}
+
+{% block content %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit", value="Sign Up">
+  </form>
+{% endblock content %}

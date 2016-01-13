@@ -1,0 +1,7 @@
+{% extends "_layout/base.html" %}
+
+{% block headline %}<h1>Welcome to your shopping list</h1>{% endblock headline %}
+
+{% block content %}
+  <p>{% if user.is_authenticated %} {{ user.username }}'s Shoping List{% endif %}</p>
+{% endblock content %}
