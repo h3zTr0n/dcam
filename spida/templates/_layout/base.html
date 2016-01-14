@@ -1,40 +1,80 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	{% load staticfiles %}
-	<title>{% block title %}  {% endblock title %}</title>
-		   {% block css %}<link href="{% static 'bootstrap-3.3.1/css/boostrap.min.css' %}" rel="stylesheet">{% endblock css %}
-		   {% block js %}<link href="{% static 'bootstrap-3.3.1/js/botstrap.min.js'%}" rel="javascript">{% endblock js %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- These first three meta tags must come first in the head-->
+	<meta name="descriptio" content="">
+	<meta name="author" content="Alison Mukoma">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>{% block title %} Your Shopping Basket!! {% endblock title %}</title>
+			<!-- Bootstrap core CSS -->
+		    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+				<link href="{% static 'css/navbar-static-top.css' %}" rel="stylesheet"
 	</head>
 	<body>
-	{% block heading %}
-		<h1>Welcom To you shopping basket</h1>
-	 {% endblock heading %}
-
 	{% block content %}
-
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button", class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="#">Shoppy</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+ 	<nav class="navbar navbar-default navbar-static-top">
+		 <div class="container">
+			 <div class="navbar-header">
+				 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+			  	<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				 </button>
+				 <a class="navbar-brand" href="#"> Shopping Basket</a>
+			 </div>
+			 <div id="navbar" class="navbar-collapse collapse">
+				 <ul class="nav navbar-nav">
+					 <li class="active"><a href="#">Home</a></li>
+					 <li><a href="#">About</a></li>
+					 <li><a href="#">Contact</a></li>
+				 	 <li class="dropdown">
+						 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown<span class="caret"></span></a>
+						 <ul class="dropdown-menue" role="menu">
+							 <li><a href="#">Action</a></li>
+							 <li><a href="#">Another Action</a></li>
+							 <li><a href="#">Something else</a></li>
+						   <li class="divider"></li>
+							 <li class="dropdown-header">Nav header</li>
+							 <li><a href="#">Seperated link</a></li>
+							 <li><a href="#">One more Seperated link</a></li>
+						 </ul>
+					 </li>
+				 </ul>
+				 <ul class="nav navbar-nav navbar-right">
+					 <li><a href="../navbar/">Default</a></li>
+					 <li class="active"><a href="./">Static top<span class="sr-only">(current)</span></a></li>
+					 <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+				 </ul>
+			 </div> <!--/.nav-collapse -->
+		 </div>
+	 </nav>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Welcome To Your Spida Shopping Basket!</h1>
+			<p>There is no easy or convenient way of checking the return code when data is sent to the
+				customer. The developers have to search through raw XML files to look for the return
+				code. Each transaction is a separate file, so this is an extremely tedious process.
+			</p>
+			<p>
+				<a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs & raquo;</a>
+			</p>
+	</div>
+	</div>	<!-- /container -->
 
 	{% endblock content %}
 
 	{% block footer %}
-
+		<script src="https://ajax.googleapis.com/ajax/jQuery/1.11.2/jquery.min.js"></script>
+		<script src="../../dist/js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop windows 8 gub -->
+		<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 	{% endblock footer %}
  	</body>
-
 </html>

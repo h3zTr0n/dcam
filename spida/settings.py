@@ -148,8 +148,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(os.path.dirname(__file__), "static")
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), "static", "static_root")
 
+STATICFILES_DIRS = (
+os.path.join(os.path.dirname(__file__), "static", "our_static"),
+)
 MEDIA_ROOT = (BASE_DIR)
 MEDIA_URL = '/uploads/'
 WAGTAIL_SITE_NAME = 'https://www.spida.com'

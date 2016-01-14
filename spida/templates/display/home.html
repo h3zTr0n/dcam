@@ -1,4 +1,5 @@
 {% extends "_layout/base.html" %}
+{% load staticfiles %}
 <html>
 <head>
 	<title>{% block title %}  {% endblock %}</title>
@@ -6,12 +7,7 @@
 		   {% block js %}<a href="{}" type="javascript"></a>{% endblock %}
 	</head>
 	<body>
-	{% block heading %}
-	{% load staticfiles %}
-		<h1>Display Home page:</h1>
-	 {% endblock heading %}
-
-	  {% block content %}
+	  {% block content %} | {{ block.super }}
 		 {% for item in items %}
 		 	<div class="container">
 			 <img src="{{ MEDIA_URL }}{{ item.image.url }}" width="150px" alt="{{ item.brand_name }}" class=img-responsive img-rounded/>

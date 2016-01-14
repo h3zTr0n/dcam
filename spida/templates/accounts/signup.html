@@ -4,6 +4,6 @@
 
 {% block heading %}<h1>Register for your Shopping Container</h1>{% endblock heading%}
 
-{% block content %}
+{% block content %} | {{ block.super }}
   {% crispy form %}
 {% endblock content %}
