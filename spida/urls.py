@@ -21,23 +21,22 @@ from wagtail.wagtailadmin import urls as wagtailadmin_urls
 from wagtail.wagtaildocs import urls as wagtaildocs_urls
 from wagtail.wagtailcore import urls as wagtail_urls
 #######################################
-from django.conf.urls import url
-from django.conf.urls import include
+from django.conf.urls import url, include
 from django.contrib import admin
 from spida.apps.display import urls as display_urls
-from spida.apps.myBuyList import urls as shop_urls
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from spida.apps.shopList import urls as shopList_urls
+from spida.apps.shopList.views import ShopListView, SignUpView
+
 urlpatterns = [
-	url(r'^home/', include(display_urls), name="home"),    url(r'^admin/', admin.site.urls),
-    url(r'^cms/', include(wagtailadmin_urls)),
-    url(r'^documents/', include(wagtaildocs_urls)),
-    url(r'^pages/', include(wagtail_urls)),
-    #url(r'accounts/register/', include(shop_urls), name="signup"),
-    url(r'^shoplist/', include(shop_urls), name="shoplist"),
-    #url(r'^register/', 'spida.apps.myBuyList.views.SignUpView.as_view()', name="Sign Up"),
-    url(r'^show/', 'spida.apps.myBuyList.views.show', name="show"),
+    url(r'^shop/', ShopListView.as_view()),
+    url(r'^accounts/register/', SignUpView.as_view()),
+    url(r'^home/', include(display_urls), name="home"),    url(r'^admin/', admin.site.urls),
+    # url(r'^cms/', include(wagtailadmin_urls)),
+    # url(r'^documents/', include(wagtaildocs_urls)),
+    # url(r'^pages/', include(wagtail_urls)),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

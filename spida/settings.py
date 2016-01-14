@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'compressor',
     'taggit',
     'spida.apps.display',
-    'spida.apps.myBuyList',
+    'spida.apps.shopList',
     #'authtools',
     'crispy_forms',
     'easy_thumbnails',
