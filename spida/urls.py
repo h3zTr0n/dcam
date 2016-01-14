@@ -34,10 +34,10 @@ urlpatterns = [
     url(r'^cms/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),
     url(r'^pages/', include(wagtail_urls)),
-    url(r'accounts/register/', include(shop_urls), name="signup"),
+    #url(r'accounts/register/', include(shop_urls), name="signup"),
     url(r'^shoplist/', include(shop_urls), name="shoplist"),
     #url(r'^register/', 'spida.apps.myBuyList.views.SignUpView.as_view()', name="Sign Up"),
-
+    url(r'^show/', 'spida.apps.myBuyList.views.show', name="show"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
