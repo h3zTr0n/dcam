@@ -39,28 +39,29 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'wagtail.wagtailforms',
-    'wagtail.wagtailredirects',
-    'wagtail.wagtailembeds',
-    'wagtail.wagtailsites',
-    'wagtail.wagtailusers',
-    'wagtail.wagtailsnippets',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailimages',
-    'wagtail.wagtailsearch',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtailcore',
+    # 'django.contrib.staticfiles',
+    # 'wagtail.wagtailforms',
+    # 'wagtail.wagtailredirects',
+    # 'wagtail.wagtailembeds',
+    # 'wagtail.wagtailsites',
+    # 'wagtail.wagtailusers',
+    # 'wagtail.wagtailsnippets',
+    # 'wagtail.wagtaildocs',
+    # 'wagtail.wagtailimages',
+    # 'wagtail.wagtailsearch',
+    # 'wagtail.wagtailadmin',
+    # 'wagtail.wagtailcore',
     'modelcluster',
     'compressor',
     'taggit',
-    'spida.apps.display',
-    'spida.apps.shopList',
+    'spida.apps.Accounts',
+    'spida.apps.ImgManager',
+    'spida.apps.Reactor',
+    'spida.apps.SupGrid',
+    'spida.apps.Reactor',
     #'authtools',
     'crispy_forms',
     'easy_thumbnails',
-    'spida.apps.accounts',
-
 ]
 INSTALLED_APPS += (
     'debug_toolbar.apps.DebugToolbarConfig',)
@@ -75,9 +76,9 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
-]
+#     'wagtail.wagtailcore.middleware.SiteMiddleware',
+#     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+ ]
 
 ROOT_URLCONF = 'spida.urls'
 

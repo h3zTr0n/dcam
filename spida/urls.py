@@ -31,10 +31,7 @@ from spida.apps.shopList import urls as shopList_urls
 from spida.apps.shopList.views import ShopListView, SignUpView, LoginView
 
 urlpatterns = [
-    url(r'^shop/', ShopListView.as_view()),
-    url(r'^accounts/login/', LoginView.as_view()),
-    url(r'^accounts/register/', SignUpView.as_view()),
-    url(r'^home/', include(display_urls), name="home"),    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     url(r'^cms/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),
     url(r'^pages/', include(wagtail_urls)),
