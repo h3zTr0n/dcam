@@ -53,12 +53,12 @@ INSTALLED_APPS = [
     'wagtail.wagtailcore',
     'modelcluster',
     'compressor',
-    'taggit',
+   # 'taggit',
     'spida.apps.display',
     'spida.apps.shopList',
     #'authtools',
-    'crispy_forms',
-    'easy_thumbnails',
+   # 'crispy_forms',
+   # 'easy_thumbnails',
     'spida.apps.accounts',
 
 ]
