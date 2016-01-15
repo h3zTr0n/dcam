@@ -1,4 +1,0 @@
-{% extends "_layout/base.html" %}
-{% block content %} | {{ block.super }}
-  <p><h1>{% if user.is_authenticated %} {{ user.username }}'s Shoping List{% endif %}</h1></p>
-{% endblock content %}
