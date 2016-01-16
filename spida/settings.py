@@ -56,7 +56,7 @@ INSTALLED_APPS = [
    # 'taggit',
     'spida.apps.SupGrid',
     'spida.apps.YumYum',
-    'spida.apps.Reactor',
+    'spida.apps.Reacta',
     'spida.apps.Account',
     #'authtools',
    # 'crispy_forms',

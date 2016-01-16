@@ -14,6 +14,7 @@ class Food(models.Model):
 	price = models.PositiveIntegerField(blank=False)
 	desciption = models.DateTimeField(max_length=500)
 	supplier_name = models.ForeignKey(SupDetails, on_delete=models.CASCADE)
+	food_img = 
 
 class Promos(models.Model):
 	item_on_promo = models.CharField(max_length=32, blank=False)
