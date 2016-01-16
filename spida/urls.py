@@ -29,6 +29,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # from spida.apps.shopList.views import ShopListView, SignUpView, LoginView
 
 urlpatterns = [
+    url(r'^', include(spida.apps.accounts, namespace="accounts")),
     url(r'^admin/', admin.site.urls),
     url(r'^cms/', include(wagtailadmin_urls)),
 #     url(r'^documents/', include(wagtaildocs_urls)),
