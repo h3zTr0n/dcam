@@ -7,14 +7,14 @@ class SupDetails(models.Model):
 	supplier_name = models.CharField(max_length=32, blank=False)
 	phone_number = models.PositiveIntegerField(blank=False)
 	branch_number = models.IntegerField()
-	date_created = models.DateTimeField()
+	date_joined = models.DateField()
 
 class Food(models.Model):
 	food_name = models.CharField(max_length=100, blank=False)
 	price = models.PositiveIntegerField(blank=False)
 	desciption = models.DateTimeField(max_length=500)
 	supplier_name = models.ForeignKey(SupDetails, on_delete=models.CASCADE)
-	food_img = 
+	food_img = models.ImageField()
 
 class Promos(models.Model):
 	item_on_promo = models.CharField(max_length=32, blank=False)
