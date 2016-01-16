@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
+<<<<<<< HEAD
 class SupDetails(models.Model):
 	supplier_name = models.CharField(max_length=32, blank=False)
 	phone_number = models.PositiveIntegerField(blank=False)
@@ -27,3 +28,5 @@ class Promos(models.Model):
 
 
 
+=======
+>>>>>>> a1caaf3af9d72f3523e941ca7a6e43f486754924
