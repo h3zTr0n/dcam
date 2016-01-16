@@ -17,27 +17,19 @@ Including another URLconf
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 # Integrating wagtail content manager
-from wagtail.wagtailadmin import urls as wagtailadmin_urls
-from wagtail.wagtaildocs import urls as wagtaildocs_urls
-from wagtail.wagtailcore import urls as wagtail_urls
+# from wagtail.wagtailadmin import urls as wagtailadmin_urls
+# from wagtail.wagtaildocs import urls as wagtaildocs_urls
+# from wagtail.wagtailcore import urls as wagtail_urls
 #######################################
 from django.conf.urls import url, include
 from django.contrib import admin
-from spida.apps.display import urls as display_urls
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from spida.apps.shopList import urls as shopList_urls
-from spida.apps.shopList.views import ShopListView, SignUpView, LoginView
 
 urlpatterns = [
-    url(r'^shop/', ShopListView.as_view()),
-    url(r'^accounts/login/', LoginView.as_view()),
-    url(r'^accounts/register/', SignUpView.as_view()),
-    url(r'^home/', include(display_urls), name="home"),    url(r'^admin/', admin.site.urls),
-    url(r'^cms/', include(wagtailadmin_urls)),
-    url(r'^documents/', include(wagtaildocs_urls)),
-    url(r'^pages/', include(wagtail_urls)),
+    url(r'^admin/', admin.site.urls),
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
