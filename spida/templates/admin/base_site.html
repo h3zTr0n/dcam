@@ -1,5 +1,6 @@
 {% extends "admin/base.html" %}
-{% load i18n %}{% load admin_static bootstrapped_goodies_tags %}
+{% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}{% include "_brandname.html" %} Admin{% endblock %}
 
@@ -14,4 +15,3 @@
 {% block extrahead %}{{ block.super }}
   <link href="{% static 'site/css/main.css' %}" rel="stylesheet">
 {% endblock %}
-
